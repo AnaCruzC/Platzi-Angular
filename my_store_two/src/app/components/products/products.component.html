@@ -1,0 +1,21 @@
+<p>products works!</p>
+<p>La cantidad es {{myShoppingCar.length }}</p>
+<br/>
+<p>El total es {{total }}</p>
+<p>Today :  {{today| date : 'short' }}</p>
+
+<p>Today :  {{date| timeAgo }}</p>
+
+<p>Otra fecha :  {{date | date : 'yyyy.dd.MM' }}</p>
+<br/>
+<button (click)="toggleProductDetail()">click</button>
+<div class="products--grid"> 
+    <app-product [products]="product" *ngFor="let product of products"
+    (addedProduct)="onAddToShoppingCart($event)"
+    ></app-product> 
+</div>
+
+<div class="product-" [class.active]="showProductDetail"> 
+    <button (click)="toggleProductDetail()">Close</button>
+    Contenido
+</div>

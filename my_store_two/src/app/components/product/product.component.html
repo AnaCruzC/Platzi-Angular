@@ -1,0 +1,9 @@
+<p>product works!</p>
+<!-- <img width="200" [src]='products.image' alt="">
+<h2>{{products.price}}</h2>
+<p>{{products.name}}</p> -->
+<app-img [imag]='products.image'></app-img>
+<h2>{{products.price | currency: 'COP'}}</h2>
+<p>{{products.title | reverse}}</p> 
+<p appHighlight>{{products.description }}</p> 
+<button (click)="onAddToCart()">Add Cart</button>
